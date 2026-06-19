@@ -83,7 +83,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   html {
@@ -91,13 +91,18 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: Inter, "Atkinson Hyperlegible", system-ui, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
     line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+    font-family: "Barlow Condensed", Oswald, Montserrat, system-ui, sans-serif;
+    letter-spacing: -0.025em;
     line-height: 1.1;
   }
 
@@ -155,18 +160,45 @@
   }
 
   .container-prose {
-    @apply mx-auto max-w-3xl px-4 sm:px-6;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-prose {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 
   .section {
-    @apply py-16 md:py-24;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
   }
 
   .eyebrow {
-    @apply inline-block text-xs font-bold uppercase tracking-[0.2em] text-mid-grey;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: hsl(var(--mid-grey));
   }
 
   .h-display {
-    @apply font-display font-extrabold uppercase tracking-tight;
+    font-family: "Barlow Condensed", Oswald, Montserrat, system-ui, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
   }
 }

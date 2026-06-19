@@ -136,7 +136,7 @@ const App = () => {
             <p className="text-xs uppercase tracking-[0.25em] text-mid-grey">Pitch bookings</p>
             <h1 className="mt-4 text-4xl font-bold uppercase leading-tight">Weekly booking availability</h1>
             <p className="mt-4 text-foreground/75">
-              Read-only pitch availability for the current week. Wednesday, Thursday, Saturday and Sunday only.
+              Read-only pitch availability for the current week. To make a booking please message Pippa.
             </p>
           </div>
 
