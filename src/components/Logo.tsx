@@ -1,4 +1,4 @@
-import badge from "../../../club-connect-main/src/assets/club-badge.png";
+import badge from "../assets/club-badge.png";
 
 export const Logo = ({ inverted = false }: { inverted?: boolean }) => (
   <div className="flex items-center gap-3">
