@@ -37,6 +37,7 @@ const pitchOrder: Record<string, number> = {
   "7v7 (1)": 2,
   "7v7 (2)": 3,
   "9v9": 4,
+  "11v11": 5,
 };
 
 const parseSlotStart = (time: string, date: Date) => {
@@ -50,6 +51,7 @@ const pitchFilters = [
   { value: "5v5", label: "5v5" },
   { value: "7v7", label: "7v7" },
   { value: "9v9", label: "9v9" },
+  { value: "11v11", label: "11v11" },
 ] as const;
 
 type PitchFilter = (typeof pitchFilters)[number]["value"];
